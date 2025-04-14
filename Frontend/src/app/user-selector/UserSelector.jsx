@@ -1,13 +1,12 @@
 import React from "react";
-import image from "../components/image.png";
 
 function UserSelector() {
   return (
-    <div className="w-full max-w-[65rem] h-auto mx-auto mt-10 flex flex-col lg:flex-row items-center justify-between bg-gradient-to-br from-yellow-200 via-orange-100 to-red-200 rounded-3xl shadow-2xl overflow-hidden border-4 border-brown-500 relative p-6">
+    <div className="w-full max-w-[65rem] h-auto mx-auto mt-10 flex flex-col lg:flex-row items-center justify-between bg-gradient-to-br from-yellow-200 via-orange-100 to-red-200 dark:from-gray-800 dark:via-gray-700 dark:to-gray-900 rounded-3xl shadow-2xl overflow-hidden border-4 border-brown-500 relative p-6">
       
       <div className="flex flex-col justify-center items-center px-6 py-8 lg:p-12">
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 text-center tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-brown-800 via-orange-600 to-yellow-500 drop-shadow-2xl"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground text-center tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-brown-800 via-orange-600 to-yellow-500 drop-shadow-2xl"
           style={{
             animation: "glow 2s infinite",
             textShadow: "0 0 0px #ff8c00, 0 0 0px #ff8c00, 0 0 0px #ff4500",
@@ -40,7 +39,7 @@ function UserSelector() {
 
       <div className="mt-10 lg:mt-0 relative w-full max-w-[32rem] h-[20rem] sm:h-[30rem] md:h-[35rem] rounded-3xl shadow-2xl overflow-hidden">
         <img
-          src={image}
+          src="/components/image.png"
           alt="Library"
           className="w-full h-full object-fill transform hover:scale-105 transition-transform duration-700 ease-in-out"
         />

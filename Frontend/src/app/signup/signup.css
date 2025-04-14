@@ -137,7 +137,7 @@
  
   
   body.dark-theme {
-    background: url('Img5.png') no-repeat center center/cover;
+    background: url('/components/Img5.png') no-repeat center center/cover;
     color: white;
   }
   
@@ -191,7 +191,7 @@ body.dark-theme #BookVerse {
     backdrop-filter: blur(10px);
   }
   body.dark-theme .left-panel img.logo {
-    content: url('Img5.png');
+    content: url('/components/Img5.png');
   }
   @media screen and (max-width: 768px) {
     .container {
