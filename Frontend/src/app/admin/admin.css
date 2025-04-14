@@ -1,73 +1,69 @@
-  * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+}
 
-  }
-
-  body {
-     display: flex; 
-     flex-direction: column; 
+body {
+    display: flex;
+    flex-direction: column;
     height: 100%;
-  }
+}
 
-  
-  .topbar {
+.topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(80, 80, 255);
     padding: 10px 20px;
     height: 80px;
-    
-  }
+}
 
-  .topbar .logo {
+.topbar .logo {
     font-weight: bold;
-  }
+}
 
-  .topbar .user-circle {
+.topbar .user-circle {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: white;
     display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 18px;
-  }
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
 
-  .main-layout {
+.main-layout {
     display: flex;
-    
+
     flex: 1;
     height: 100%;
-  }
+}
 
-  .sidebar {
+.sidebar {
     width: 200px;
     background-color: #eaeaea;
     padding: 20px;
     height: 700px;
-  }
+}
 
-  .sidebar a {
+.sidebar a {
     display: block;
     margin-bottom: 15px;
     text-decoration: none;
     color: #333;
-  }
+}
 
-  
-  .content {
+.content {
     flex: 1;
     padding: 40px;
     background-color: #fafafa;
     position: relative;
-  }
+}
 
-  .card {
+.card {
     width: 200px;
     height: 100px;
     background-color: white;
@@ -77,37 +73,35 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-  }
+}
 
-  img{
+img {
     height: 60px;
-    width:300px;
+    width: 300px;
+}
 
-  }
-
-  #Search{
+#Search {
     height: 25px;
-    width:600px;
+    width: 600px;
     border-radius: 5px;
     font-size: 20px;
     padding: 5px;
-  }
+}
 
-
-  .dashboard-header {
+.dashboard-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
     background-color: #f4f6fb;
-  }
+}
 
-  .dashboard-header h2 {
+.dashboard-header h2 {
     font-size: 20px;
     font-weight: 600;
-  }
+}
 
-  .add-button {
+.add-button {
     background-color: #6a5acd;
     color: white;
     border: none;
@@ -115,18 +109,18 @@
     border-radius: 6px;
     cursor: pointer;
     font-weight: 500;
-  }
+}
 
-  .card-container {
+.card-container {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 90px;
     padding: 20px 30px;
     background-color: rgb(216, 209, 209);
-  }
+}
 
-  .card {
+.card {
     background-color: white;
     width: 180px;
     border-radius: 12px;
@@ -134,26 +128,26 @@
     padding: 20px;
     text-align: center;
     border: 2px solid transparent;
-  }
+}
 
-  .card-icon {
+.card-icon {
     font-size: 30px;
     margin-bottom: 10px;
-  }
+}
 
-  .card .label {
+.card .label {
     font-size: 14px;
     font-weight: 500;
     color: #333;
-  }
+}
 
-  .card .value {
+.card .value {
     font-size: 22px;
     font-weight: bold;
     margin: 5px 0;
-  }
+}
 
-  .card button {
+.card button {
     margin-top: 10px;
     padding: 5px 10px;
     border: none;
@@ -161,33 +155,57 @@
     border-radius: 6px;
     cursor: pointer;
     font-size: 13px;
-  }
+}
 
-  
-  .yellow { background-color: #fff9e6; border-color: #ffe699; height: 200px;}
-  .blue { background-color: #e6e6ff; border-color: #9999ff; height: 200px;}
-  .teal { background-color: #e6ffff; border-color: #66cccc; height: 200px;}
-  .green { background-color: #e6ffef; border-color: #66cc99;height: 200px; }
-  .pink { background-color: #ffe6ea; border-color: #ff99aa; height: 200px;}
-  
-  #welcome{
+.yellow {
+    background-color: #fff9e6;
+    border-color: #ffe699;
+    height: 200px;
+}
+.blue {
+    background-color: #e6e6ff;
+    border-color: #9999ff;
+    height: 200px;
+}
+.teal {
+    background-color: #e6ffff;
+    border-color: #66cccc;
+    height: 200px;
+}
+.green {
+    background-color: #e6ffef;
+    border-color: #66cc99;
+    height: 200px;
+}
+.pink {
+    background-color: #ffe6ea;
+    border-color: #ff99aa;
+    height: 200px;
+}
+
+#welcome {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
-    color:transparent;
+    color: transparent;
     animation: glow 2s infinite;
-    text-shadow: 0 0 0px #ff8c00, 0 0 0px #ff8c00, 0 0 0px #ff4500;
-  }
-  @keyframes glow {
-    0%, 100% {
-      text-shadow: 0 0 0px #ff8c00, 0 0 0px #ffa500, 0 0 0px #ff4500;
+    text-shadow:
+        0 0 0px #ff8c00,
+        0 0 0px #ff8c00,
+        0 0 0px #ff4500;
+}
+@keyframes glow {
+    0%,
+    100% {
+        text-shadow:
+            0 0 0px #ff8c00,
+            0 0 0px #ffa500,
+            0 0 0px #ff4500;
     }
     50% {
-      text-shadow: 0 0 0px #ffd700, 0 0 0px #ff8c00, 0 0 0px #ff4500;
+        text-shadow:
+            0 0 0px #ffd700,
+            0 0 0px #ff8c00,
+            0 0 0px #ff4500;
+    }
 }
-}
-
-  
-
-
-   

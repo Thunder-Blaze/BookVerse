@@ -2,14 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Poppins', sans-serif;
     transition: all 0.5s ease;
-  }
-  
-  .theme-button {
+}
+
+.theme-button {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -21,14 +21,14 @@
     border-radius: 50px;
     cursor: pointer;
     z-index: 1000;
-  }
-  
-  .container {
+}
+
+.container {
     display: flex;
     min-height: 100vh;
-  }
-  
-  .left-panel {
+}
+
+.left-panel {
     flex: 1;
     padding: 60px;
     display: flex;
@@ -36,67 +36,67 @@
     justify-content: center;
     /* background-color: #fff3e0; */
     /* background-color: white; */
-  }
-  
-  .left-panel img.logo {
+}
+
+.left-panel img.logo {
     width: 700px;
     margin-bottom: 30px;
-   /* margin-left: 75px; */
-   height: 500px;
-  }
-  
-  .left-panel h1 {
+    /* margin-left: 75px; */
+    height: 500px;
+}
+
+.left-panel h1 {
     font-size: 36px;
     color: #ff5722;
     margin-bottom: 10px;
-  }
-  
-  .left-panel p {
+}
+
+.left-panel p {
     font-size: 18px;
-  }
-  
-  .right-panel {
+}
+
+.right-panel {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #fff;
     padding: 60px;
-  }
-  
-  .signup-form {
+}
+
+.signup-form {
     width: 100%;
     max-width: 400px;
-  }
-  
-  .signup-form h2 {
+}
+
+.signup-form h2 {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .input-group {
+}
+
+.input-group {
     display: flex;
     align-items: center;
     border-bottom: 2px solid #ccc;
     margin-bottom: 20px;
     padding: 8px 0;
-  }
-  
-  .input-group i {
+}
+
+.input-group i {
     margin-right: 10px;
     color: #888;
-  }
-  
-  .input-group input {
+}
+
+.input-group input {
     border: none;
     outline: none;
     flex: 1;
     padding: 10px;
     background: transparent;
     font-size: 16px;
-  }
-  
-  .submit-btn {
+}
+
+.submit-btn {
     width: 100%;
     padding: 12px;
     background: linear-gradient(45deg, orange, orangered);
@@ -106,130 +106,148 @@
     border-radius: 25px;
     cursor: pointer;
     margin-top: 10px;
-  }
-  
-  .login-link {
+}
+
+.login-link {
     text-align: center;
     margin-top: 15px;
-  }
-  
-  .login-link a {
+}
+
+.login-link a {
     color: #ff5722;
     text-decoration: none;
-  }
-  
-  .social-login {
+}
+
+.social-login {
     text-align: center;
     margin-top: 20px;
-  }
-  
-  .social-icons img {
+}
+
+.social-icons img {
     width: 35px;
     margin: 0 10px;
     cursor: pointer;
-  }
-  
-  body.light-theme {
+}
+
+body.light-theme {
     /* background: #fff8f0; */
     color: #333;
-  }
-  
- 
-  
-  body.dark-theme {
+}
+
+body.dark-theme {
     background: url('/components/Img5.png') no-repeat center center/cover;
     color: white;
-  }
-  
-  body.dark-theme .right-panel {
+}
+
+body.dark-theme .right-panel {
     background: black;
     backdrop-filter: blur(10px);
-  }
-  
-  body.dark-theme .input-group {
+}
+
+body.dark-theme .input-group {
     border-bottom-color: #aaa;
-  }
-  
-  body.dark-theme .input-group i,
-  body.dark-theme .input-group input {
+}
+
+body.dark-theme .input-group i,
+body.dark-theme .input-group input {
     color: #fff;
-  }
-  
-  body.dark-theme .submit-btn {
+}
+
+body.dark-theme .submit-btn {
     background: linear-gradient(45deg, #a34eff, #ff4f81);
-  }
-  #BookVerse{
-    color:transparent;
+}
+#BookVerse {
+    color: transparent;
     animation: glow 2s infinite;
-    text-shadow: 0 0 0px #ff8c00, 0 0 0px #ff8c00, 0 0 0px #ff4500;
-  }
-  @keyframes glow {
-    0%, 100% {
-      text-shadow: 0 0 0px #ff8c00, 0 0 0px #ffa500, 0 0 0px #ff4500;
+    text-shadow:
+        0 0 0px #ff8c00,
+        0 0 0px #ff8c00,
+        0 0 0px #ff4500;
+}
+@keyframes glow {
+    0%,
+    100% {
+        text-shadow:
+            0 0 0px #ff8c00,
+            0 0 0px #ffa500,
+            0 0 0px #ff4500;
     }
     50% {
-      text-shadow: 0 0 0px #ffd700, 0 0 0px #ff8c00, 0 0 0px #ff4500;
+        text-shadow:
+            0 0 0px #ffd700,
+            0 0 0px #ff8c00,
+            0 0 0px #ff4500;
     }
-  }
+}
 body.dark-theme #BookVerse {
     color: transparent;
     animation: glow-dark 2s infinite;
-    text-shadow: 0 0 0px #a34eff, 0 0 0px #ff4f81, 0 0 0px #a34eff;
-  }
-  
-  @keyframes glow-dark {
-    0%, 100% {
-      text-shadow: 0 0 0px #a34eff, 0 0 0px #ff4f81, 0 0 0px #a34eff;
+    text-shadow:
+        0 0 0px #a34eff,
+        0 0 0px #ff4f81,
+        0 0 0px #a34eff;
+}
+
+@keyframes glow-dark {
+    0%,
+    100% {
+        text-shadow:
+            0 0 0px #a34eff,
+            0 0 0px #ff4f81,
+            0 0 0px #a34eff;
     }
     50% {
-      text-shadow: 0 0 0px #ff4f81, 0 0 0px #a34eff, 0 0 0px #ff4f81;
+        text-shadow:
+            0 0 0px #ff4f81,
+            0 0 0px #a34eff,
+            0 0 0px #ff4f81;
     }
-  }
-  
-  body.dark-theme .left-panel {
+}
+
+body.dark-theme .left-panel {
     background: black;
     backdrop-filter: blur(10px);
-  }
-  body.dark-theme .left-panel img.logo {
+}
+body.dark-theme .left-panel img.logo {
     content: url('/components/Img5.png');
-  }
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
     .container {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .left-panel,
     .right-panel {
-      flex: none;
-      width: 100%;
-      padding: 20px;
+        flex: none;
+        width: 100%;
+        padding: 20px;
     }
-  
+
     .left-panel img.logo {
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
     }
-  
+
     .signup-form {
-      max-width: 100%;
-      margin: 0 auto;
+        max-width: 100%;
+        margin: 0 auto;
     }
-  
+
     .theme-button {
-      font-size: 14px;
-      padding: 8px 10px;
-      top: 10px;
-      right: 10px;
+        font-size: 14px;
+        padding: 8px 10px;
+        top: 10px;
+        right: 10px;
     }
-  
+
     .submit-btn {
-      padding: 10px;
-      font-size: 14px;
+        padding: 10px;
+        font-size: 14px;
     }
-  
+
     .social-icons img {
-      width: 30px;
-      margin: 5px;
+        width: 30px;
+        margin: 5px;
     }
-  }
+}

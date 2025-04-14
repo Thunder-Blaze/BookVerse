@@ -1,82 +1,127 @@
-'use client';
+'use client'
 
-import { useState, useEffect } from 'react';
-import Header from '../components/header';
-import Sidebar from '../components/user-sidebar';
-import WelcomeSection from '../components/WelcomeSection';
+import { useState, useEffect } from 'react'
+import Header from '../components/header'
+import Sidebar from '../components/user-sidebar'
+import WelcomeSection from '../components/WelcomeSection'
 
 const books = [
-  { id: 1, name: 'Book1', issuedTo: 'A', returnBy: '2025-04-20', fine: 'Rs.200' },
-  { id: 2, name: 'Book2', issuedTo: 'B', returnBy: '2025-04-22', fine: 'Rs.200' },
-  { id: 3, name: 'Book3', issuedTo: 'C', returnBy: '2025-04-25', fine: 'Rs.200' },
-];
+    {
+        id: 1,
+        name: 'Book1',
+        issuedTo: 'A',
+        returnBy: '2025-04-20',
+        fine: 'Rs.200',
+    },
+    {
+        id: 2,
+        name: 'Book2',
+        issuedTo: 'B',
+        returnBy: '2025-04-22',
+        fine: 'Rs.200',
+    },
+    {
+        id: 3,
+        name: 'Book3',
+        issuedTo: 'C',
+        returnBy: '2025-04-25',
+        fine: 'Rs.200',
+    },
+]
 
 export default function Dashboard() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [mounted, setMounted] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('')
+    const [mounted, setMounted] = useState(false)
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+    useEffect(() => {
+        setMounted(true)
+    }, [])
 
-  const filteredBooks = books.filter(book =>
-    book.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+    const filteredBooks = books.filter((book) =>
+        book.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
 
-  if (!mounted) {
-    return null;
-  }
+    if (!mounted) {
+        return null
+    }
 
-  return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
-      <Header role="user" />
-      
-      {/* Main Content */}
-      <div className="pt-16 flex">
-        <Sidebar />
+    return (
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+            <Header role="user" />
 
-        {/* Main Content Area */}
-        <main className="flex-1 ml-64 p-8">
-          <div className="max-w-7xl mx-auto">
-            <WelcomeSection name="User" buttonText="Issue Book" buttonAction="/issue-book" /> 
-            
-            <div className="mb-4">
-              <input
-                type="text"
-                placeholder="Search books..."
-                className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-foreground"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
+            {/* Main Content */}
+            <div className="pt-16 flex">
+                <Sidebar />
+
+                {/* Main Content Area */}
+                <main className="flex-1 ml-64 p-8">
+                    <div className="max-w-7xl mx-auto">
+                        <WelcomeSection
+                            name="User"
+                            buttonText="Issue Book"
+                            buttonAction="/issue-book"
+                        />
+
+                        <div className="mb-4">
+                            <input
+                                type="text"
+                                placeholder="Search books..."
+                                className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-foreground"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                            />
+                        </div>
+
+                        <div className="overflow-x-auto">
+                            <table className="min-w-full bg-white dark:bg-gray-800 rounded-lg">
+                                <thead>
+                                    <tr className="bg-gray-200 dark:bg-gray-700">
+                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                                            ID
+                                        </th>
+                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                                            Book Name
+                                        </th>
+                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                                            Issued To
+                                        </th>
+                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                                            Return By
+                                        </th>
+                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                                            Fine
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                                    {filteredBooks.map((book) => (
+                                        <tr
+                                            key={book.id}
+                                            className="hover:bg-gray-50 dark:hover:bg-gray-700"
+                                        >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                                                {book.id}
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                                                {book.name}
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                                                {book.issuedTo}
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                                                {book.returnBy}
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                                                {book.fine}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
             </div>
-
-            <div className="overflow-x-auto">
-              <table className="min-w-full bg-white dark:bg-gray-800 rounded-lg">
-                <thead>
-                  <tr className="bg-gray-200 dark:bg-gray-700">
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">ID</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Book Name</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Issued To</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Return By</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Fine</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                  {filteredBooks.map((book) => (
-                    <tr key={book.id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">{book.id}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">{book.name}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">{book.issuedTo}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">{book.returnBy}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">{book.fine}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </main>
-      </div>
-    </div>
-  );
+        </div>
+    )
 }

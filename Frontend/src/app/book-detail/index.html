@@ -1,181 +1,352 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BookVerse</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body class="dark">
-  <div class="app-container">
-    <!-- Left sidebar -->
-    <div class="sidebar">
-      <div class="sidebar-header">
-        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-10%20at%2009.34.44_d840144f.jpg-Pf5DCDQoEphdW3AzkeFAz8JKcItKBy.jpeg" alt="BookVerse Logo" class="logo">
-      </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BookVerse</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="dark">
+        <div class="app-container">
+            <!-- Left sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <img
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-10%20at%2009.34.44_d840144f.jpg-Pf5DCDQoEphdW3AzkeFAz8JKcItKBy.jpeg"
+                        alt="BookVerse Logo"
+                        class="logo"
+                    />
+                </div>
 
-      <div class="sidebar-section">
-        <a href="#" class="sidebar-link accent"><span class="arrow">⟫</span> Library</a>
-        <nav class="sidebar-nav">
-          <a href="#" class="sidebar-nav-link">Add Items</a>
-          <a href="#" class="sidebar-nav-link">Add Collection</a>
-          <a href="#" class="sidebar-nav-link">Publish</a>
-        </nav>
-      </div>
+                <div class="sidebar-section">
+                    <a href="#" class="sidebar-link accent"
+                        ><span class="arrow">⟫</span> Library</a
+                    >
+                    <nav class="sidebar-nav">
+                        <a href="#" class="sidebar-nav-link">Add Items</a>
+                        <a href="#" class="sidebar-nav-link">Add Collection</a>
+                        <a href="#" class="sidebar-nav-link">Publish</a>
+                    </nav>
+                </div>
 
-      <div class="sidebar-section">
-        <nav class="sidebar-nav">
-          <a href="#" class="sidebar-nav-link">Lending</a>
-          <a href="#" class="sidebar-nav-link">Managers</a>
-          <a href="#" class="sidebar-nav-link">Barcodes</a>
-        </nav>
-      </div>
+                <div class="sidebar-section">
+                    <nav class="sidebar-nav">
+                        <a href="#" class="sidebar-nav-link">Lending</a>
+                        <a href="#" class="sidebar-nav-link">Managers</a>
+                        <a href="#" class="sidebar-nav-link">Barcodes</a>
+                    </nav>
+                </div>
 
-      <div class="sidebar-section">
-        <nav class="sidebar-nav">
-          <a href="#" class="sidebar-nav-link">Dashboards</a>
-          <a href="#" class="sidebar-nav-link">Reports</a>
-        </nav>
-      </div>
+                <div class="sidebar-section">
+                    <nav class="sidebar-nav">
+                        <a href="#" class="sidebar-nav-link">Dashboards</a>
+                        <a href="#" class="sidebar-nav-link">Reports</a>
+                    </nav>
+                </div>
 
-      <div class="sidebar-section">
-        <nav class="sidebar-nav">
-          <a href="#" class="sidebar-nav-link">Settings</a>
-          <a href="#" class="sidebar-nav-link">Support</a>
-          <a href="#" class="sidebar-nav-link">Logout</a>
-        </nav>
-      </div>
-    </div>
+                <div class="sidebar-section">
+                    <nav class="sidebar-nav">
+                        <a href="#" class="sidebar-nav-link">Settings</a>
+                        <a href="#" class="sidebar-nav-link">Support</a>
+                        <a href="#" class="sidebar-nav-link">Logout</a>
+                    </nav>
+                </div>
+            </div>
 
-    <!-- Main content -->
-    <div class="main-content">
-      <!-- Top bar -->
-      <div class="top-bar">
-        <div class="top-bar-actions">
-          <button class="top-bar-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-            Edit
-          </button>
-          <button class="top-bar-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            Details
-          </button>
-          <button class="top-bar-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            Move
-          </button>
-          <button class="top-bar-button delete">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            Delete
-          </button>
+            <!-- Main content -->
+            <div class="main-content">
+                <!-- Top bar -->
+                <div class="top-bar">
+                    <div class="top-bar-actions">
+                        <button class="top-bar-button">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon"
+                            >
+                                <path
+                                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                                ></path>
+                                <path
+                                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                                ></path>
+                            </svg>
+                            Edit
+                        </button>
+                        <button class="top-bar-button">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon"
+                            >
+                                <path
+                                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                                ></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            Details
+                        </button>
+                        <button class="top-bar-button">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon"
+                            >
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                            Move
+                        </button>
+                        <button class="top-bar-button delete">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon"
+                            >
+                                <polyline points="3 6 5 6 21 6"></polyline>
+                                <path
+                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                                ></path>
+                                <line x1="10" y1="11" x2="10" y2="17"></line>
+                                <line x1="14" y1="11" x2="14" y2="17"></line>
+                            </svg>
+                            Delete
+                        </button>
+                    </div>
+
+                    <div class="top-bar-right">
+                        <button id="theme-toggle" class="theme-toggle">
+                            <svg
+                                id="sun-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon"
+                            >
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line
+                                    x1="4.22"
+                                    y1="4.22"
+                                    x2="5.64"
+                                    y2="5.64"
+                                ></line>
+                                <line
+                                    x1="18.36"
+                                    y1="18.36"
+                                    x2="19.78"
+                                    y2="19.78"
+                                ></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line
+                                    x1="4.22"
+                                    y1="19.78"
+                                    x2="5.64"
+                                    y2="18.36"
+                                ></line>
+                                <line
+                                    x1="18.36"
+                                    y1="5.64"
+                                    x2="19.78"
+                                    y2="4.22"
+                                ></line>
+                            </svg>
+                            <svg
+                                id="moon-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon hidden"
+                            >
+                                <path
+                                    d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                                ></path>
+                            </svg>
+                        </button>
+                        <button class="close-button">×</button>
+                    </div>
+                </div>
+
+                <!-- Book content -->
+                <div class="book-content">
+                    <div class="book-header">
+                        <span class="accent arrow">⟫</span>
+                        <span class="accent">My Books</span>
+                        <span class="badge">Book</span>
+                    </div>
+
+                    <div class="book-details-container">
+                        <!-- Book cover and rating -->
+                        <div class="book-cover-container">
+                            <div class="book-cover">
+                                <img
+                                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-10%20at%2009.36.13_e277bb5e.jpg-HUIN63g8kBFbvJYEkH6seKn2O8V6BC.jpeg"
+                                    alt="Amadeus: A Play by Peter Shaffer"
+                                    width="150"
+                                    height="100"
+                                />
+                            </div>
+
+                            <div class="rating">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star half-filled">★</span>
+                            </div>
+
+                            <div class="status-badge">Completed</div>
+                        </div>
+
+                        <!-- Book details -->
+                        <div class="book-info">
+                            <h1 class="book-title">
+                                Amadeus: A Play by Peter Shaffer
+                            </h1>
+                            <h2 class="book-author">Peter Shaffer</h2>
+
+                            <div class="book-metadata">
+                                <p>2001 · 160 pages · (Harper Perennial)</p>
+                                <p>
+                                    DDC: 822.914 · LCC: PR6037.H23 · LCCN:
+                                    2001278382 · OCLC: 49853439
+                                </p>
+                                <p>
+                                    EAN / ISBN13: 9780060935498 · UPC / ISBN10:
+                                    0060935499
+                                </p>
+                                <p>Call #: 123 . FR . 23</p>
+                            </div>
+
+                            <p class="added-date">Added: 2013-01-25</p>
+
+                            <div class="book-stats">
+                                <div class="stat">
+                                    <span class="accent">Copies 1</span>
+                                </div>
+                                <div class="stat">
+                                    <span>Out 0</span>
+                                </div>
+                                <div class="stat">
+                                    <span>Holds 0</span>
+                                </div>
+                            </div>
+
+                            <button class="add-to-cart-button">
+                                Add to cart
+                            </button>
+
+                            <div class="tabs">
+                                <div class="tab-buttons">
+                                    <button
+                                        class="tab-button active"
+                                        data-tab="description"
+                                    >
+                                        Description
+                                    </button>
+                                    <button class="tab-button" data-tab="notes">
+                                        Notes
+                                    </button>
+                                    <button
+                                        class="tab-button"
+                                        data-tab="review"
+                                    >
+                                        Review
+                                    </button>
+                                </div>
+                                <div class="tab-indicator"></div>
+                            </div>
+
+                            <div class="tab-content">
+                                <div id="description" class="tab-pane active">
+                                    <p>
+                                        Originating at the National Theatre of
+                                        Great Britain, Amadeus was the recipient
+                                        of both the Evening Standard Drama Award
+                                        and the Theatre Critics Award.
+                                        <a href="#" class="accent-link"
+                                            >www.mozart.com</a
+                                        >
+                                        In the United States, the play won the
+                                        coveted Tony Award and went on to become
+                                        a critically acclaimed major motion
+                                        picture winning eight Oscars, including
+                                        Best Picture.
+                                    </p>
+                                    <p>
+                                        Now, this extraordinary work about the
+                                        life of Wolfgang Amadeus Mozart is
+                                        available with a new preface by Peter
+                                        Shaffer and a new introduction by the
+                                        director of the 1998 Broadway revival,
+                                        Sir Peter Hall. Amadeus is a must-have
+                                        for classical music buffs, theatre
+                                        lovers, and aficionados of historical
+                                        fiction.
+                                    </p>
+                                </div>
+                                <div id="notes" class="tab-pane">
+                                    <p>No notes available.</p>
+                                </div>
+                                <div id="review" class="tab-pane">
+                                    <p>No reviews available.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="top-bar-right">
-          <button id="theme-toggle" class="theme-toggle">
-            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-          </button>
-          <button class="close-button">×</button>
-        </div>
-      </div>
-
-      <!-- Book content -->
-      <div class="book-content">
-        <div class="book-header">
-          <span class="accent arrow">⟫</span>
-          <span class="accent">My Books</span>
-          <span class="badge">Book</span>
-        </div>
-
-        <div class="book-details-container">
-          <!-- Book cover and rating -->
-          <div class="book-cover-container">
-            <div class="book-cover">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-10%20at%2009.36.13_e277bb5e.jpg-HUIN63g8kBFbvJYEkH6seKn2O8V6BC.jpeg" alt="Amadeus: A Play by Peter Shaffer" width="150" height="100">
-            </div>
-
-            <div class="rating">
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star half-filled">★</span>
-            </div>
-
-            <div class="status-badge">
-              Completed
-            </div>
-          </div>
-
-          <!-- Book details -->
-          <div class="book-info">
-            <h1 class="book-title">Amadeus: A Play by Peter Shaffer</h1>
-            <h2 class="book-author">Peter Shaffer</h2>
-
-            <div class="book-metadata">
-              <p>2001 · 160 pages · (Harper Perennial)</p>
-              <p>DDC: 822.914 · LCC: PR6037.H23 · LCCN: 2001278382 · OCLC: 49853439</p>
-              <p>EAN / ISBN13: 9780060935498 · UPC / ISBN10: 0060935499</p>
-              <p>Call #: 123 . FR . 23</p>
-            </div>
-
-            <p class="added-date">Added: 2013-01-25</p>
-
-            <div class="book-stats">
-              <div class="stat">
-                <span class="accent">Copies 1</span>
-              </div>
-              <div class="stat">
-                <span>Out 0</span>
-              </div>
-              <div class="stat">
-                <span>Holds 0</span>
-              </div>
-            </div>
-
-            <button class="add-to-cart-button">
-              Add to cart
-            </button>
-
-            <div class="tabs">
-              <div class="tab-buttons">
-                <button class="tab-button active" data-tab="description">Description</button>
-                <button class="tab-button" data-tab="notes">Notes</button>
-                <button class="tab-button" data-tab="review">Review</button>
-              </div>
-              <div class="tab-indicator"></div>
-            </div>
-
-            <div class="tab-content">
-              <div id="description" class="tab-pane active">
-                <p>
-                  Originating at the National Theatre of Great Britain, Amadeus was the recipient of both the Evening
-                  Standard Drama Award and the Theatre Critics Award.
-                  <a href="#" class="accent-link">www.mozart.com</a>
-                  In the United States, the play won the coveted Tony Award and went on to become a critically
-                  acclaimed major motion picture winning eight Oscars, including Best Picture.
-                </p>
-                <p>
-                  Now, this extraordinary work about the life of Wolfgang Amadeus Mozart is available with a new
-                  preface by Peter Shaffer and a new introduction by the director of the 1998 Broadway revival, Sir
-                  Peter Hall. Amadeus is a must-have for classical music buffs, theatre lovers, and aficionados of
-                  historical fiction.
-                </p>
-              </div>
-              <div id="notes" class="tab-pane">
-                <p>No notes available.</p>
-              </div>
-              <div id="review" class="tab-pane">
-                <p>No reviews available.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
