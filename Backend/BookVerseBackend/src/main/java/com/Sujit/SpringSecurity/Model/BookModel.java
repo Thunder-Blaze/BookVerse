@@ -1,13 +1,15 @@
 package com.Sujit.SpringSecurity.Model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "books")
 public class BookModel {
-  @Id
+    @Id
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private int id;
     private String name;
     private String issuedTo;

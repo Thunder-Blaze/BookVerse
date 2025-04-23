@@ -1,0 +1,23 @@
+.navbar {
+  margin-bottom: 2rem;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+.table th {
+  background-color: #f8f9fa;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.btn {
+  margin-right: 0.5rem;
+}
+
+.alert {
+  margin-bottom: 1rem;
+} 

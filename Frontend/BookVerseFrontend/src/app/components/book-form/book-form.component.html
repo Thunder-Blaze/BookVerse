@@ -1,0 +1,53 @@
+<div class="container mt-4">
+  <h2>{{ isEditMode ? 'Edit Book' : 'Add New Book' }}</h2>
+
+  <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+    {{ errorMessage }}
+  </div>
+
+  <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" formControlName="title">
+      <div *ngIf="bookForm.get('title')?.invalid && bookForm.get('title')?.touched" class="text-danger">
+        Title is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="author" class="form-label">Author</label>
+      <input type="text" class="form-control" id="author" formControlName="author">
+      <div *ngIf="bookForm.get('author')?.invalid && bookForm.get('author')?.touched" class="text-danger">
+        Author is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="genre" class="form-label">Genre</label>
+      <input type="text" class="form-control" id="genre" formControlName="genre">
+      <div *ngIf="bookForm.get('genre')?.invalid && bookForm.get('genre')?.touched" class="text-danger">
+        Genre is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea class="form-control" id="description" formControlName="description" rows="3"></textarea>
+      <div *ngIf="bookForm.get('description')?.invalid && bookForm.get('description')?.touched" class="text-danger">
+        Description is required
+      </div>
+    </div>
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="available" formControlName="available">
+      <label class="form-check-label" for="available">Available</label>
+    </div>
+
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary me-2" [disabled]="bookForm.invalid">
+        {{ isEditMode ? 'Update' : 'Add' }} Book
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div> 

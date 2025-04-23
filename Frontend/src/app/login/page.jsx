@@ -3,13 +3,17 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { api } from '@/utils/api'
 
 export default function Login() {
+    const router = useRouter()
     const [formData, setFormData] = useState({
         email: '',
         password: '',
         rememberMe: false,
     })
+    const [error, setError] = useState('')
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target
@@ -19,10 +23,30 @@ export default function Login() {
         }))
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        // Add your login logic here
-        console.log(formData)
+        setError('')
+        
+        try {
+            const response = await api.login(formData.email, formData.password)
+            
+            if (response.token) {
+                // Store token in localStorage if remember me is checked
+                if (formData.rememberMe) {
+                    localStorage.setItem('token', response.token)
+                } else {
+                    sessionStorage.setItem('token', response.token)
+                }
+                
+                // Redirect to dashboard
+                router.push('/dashboard')
+            } else {
+                setError('Invalid email or password')
+            }
+        } catch (error) {
+            console.error('Login error:', error)
+            setError('An error occurred during login. Please try again.')
+        }
     }
 
     return (
@@ -62,6 +86,12 @@ export default function Login() {
                             <h2 className="text-3xl font-semibold text-center mb-6 text-gray-800 dark:text-gray-200">
                                 Login Page
                             </h2>
+
+                            {error && (
+                                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                                    <span className="block sm:inline">{error}</span>
+                                </div>
+                            )}
 
                             <div className="space-y-4">
                                 <div>
